@@ -1,0 +1,313 @@
+/* Crosby Plumbing - Clean Static Site */
+:root {
+  --primary: #1a5276;
+  --primary-dark: #0e3a55;
+  --accent: #e67e22;
+  --accent-hover: #cf6d17;
+  --text: #333;
+  --text-light: #666;
+  --bg: #fff;
+  --bg-alt: #f8f9fa;
+  --border: #e0e0e0;
+  --max-width: 1100px;
+  --radius: 6px;
+  --shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  background: var(--bg);
+}
+
+/* Header */
+.site-header {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.logo span { color: var(--accent); }
+
+nav { display: flex; align-items: center; gap: 24px; }
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+nav a:hover { color: var(--accent); }
+
+.nav-cta {
+  background: var(--accent);
+  color: #fff !important;
+  padding: 8px 18px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.nav-cta:hover { background: var(--accent-hover); }
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  opacity: 0.9;
+  margin-bottom: 32px;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-phone {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-decoration: none;
+  padding: 14px 32px;
+  border-radius: var(--radius);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.hero-phone:hover { background: var(--accent-hover); transform: scale(1.03); }
+
+.hero-trust {
+  margin-top: 24px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Section */
+.section {
+  padding: 60px 20px;
+}
+
+.section-alt { background: var(--bg-alt); }
+
+.section-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.section-subtitle {
+  color: var(--text-light);
+  margin-bottom: 40px;
+  font-size: 1.05rem;
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.service-card {
+  background: var(--bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.service-card-body {
+  padding: 20px;
+}
+
+.service-card h3 {
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.service-card p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+/* Testimonials */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.testimonial-card {
+  background: var(--bg);
+  padding: 24px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  position: relative;
+}
+
+.testimonial-card::before {
+  content: '"';
+  font-size: 3rem;
+  color: var(--accent);
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  opacity: 0.3;
+  font-family: Georgia, serif;
+}
+
+.testimonial-card p {
+  color: var(--text-light);
+  font-style: italic;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.testimonial-card .author {
+  font-weight: 600;
+  color: var(--primary);
+  font-style: normal;
+}
+
+.testimonial-card .stars {
+  color: var(--accent);
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+/* Financing */
+.financing-banner {
+  background: linear-gradient(135deg, #f0f4f8 0%, #e8ecf0 100%);
+  padding: 48px 20px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.financing-banner h2 {
+  font-size: 1.6rem;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.financing-banner p {
+  color: var(--text-light);
+  margin-bottom: 24px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn:hover { background: var(--accent-hover); }
+
+/* Footer */
+.site-footer {
+  background: var(--primary-dark);
+  color: #ccc;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.footer-inner a { color: var(--accent); text-decoration: none; }
+.footer-inner a:hover { text-decoration: underline; }
+
+.footer-inner .footer-phone {
+  font-size: 1.3rem;
+  color: #fff;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.footer-info {
+  font-size: 0.9rem;
+  margin-top: 16px;
+  line-height: 1.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 1.8rem; }
+  .hero-phone { font-size: 1.2rem; padding: 12px 24px; }
+  .header-inner { flex-direction: column; gap: 12px; }
+  nav { gap: 16px; flex-wrap: wrap; justify-content: center; }
+  .services-grid { grid-template-columns: 1fr; }
+}
