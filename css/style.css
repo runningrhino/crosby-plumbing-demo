@@ -25,19 +25,19 @@ body {
   background: var(--bg);
 }
 
-/* Header */
+/* Header - matches Wix gray bar + blue nav buttons */
 .site-header {
-  background: var(--bg);
-  border-bottom: 1px solid var(--border);
+  background: #ccc;
+  border-bottom: 1px solid #999;
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
 .header-inner {
-  max-width: var(--max-width);
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 12px 20px;
+  padding: 8px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -51,29 +51,25 @@ body {
 }
 
 .logo img {
-  height: 40px;
+  height: 60px;
   width: auto;
 }
 
-.logo-text {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--primary);
-}
-
-.logo-text span { color: var(--accent); }
-
-nav { display: flex; align-items: center; gap: 24px; }
+nav { display: flex; align-items: center; gap: 4px; }
 
 nav a {
-  color: var(--text);
+  color: #1a5276;
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 500;
-  transition: color 0.2s;
+  padding: 6px 16px;
+  background: #1a5276;
+  color: #fff;
+  border-radius: 0;
+  transition: background 0.2s;
 }
 
-nav a:hover { color: var(--accent); }
+nav a:hover { background: #0e3a55; }
 
 .nav-cta {
   background: var(--accent);
@@ -84,14 +80,11 @@ nav a:hover { color: var(--accent); }
   transition: background 0.2s;
 }
 
-.nav-cta:hover { background: var(--accent-hover); }
-
-/* Hero */
+/* Hero - matches Wix: full photo with overlay content */
 .hero {
   background: url('../images/hero-bg.jpg') center/cover no-repeat;
   color: #fff;
-  padding: 0;
-  min-height: 500px;
+  min-height: 420px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,7 +95,7 @@ nav a:hover { color: var(--accent); }
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(26, 82, 118, 0.7);
+  background: rgba(0, 0, 0, 0.35);
 }
 
 .hero-inner {
@@ -110,7 +103,7 @@ nav a:hover { color: var(--accent); }
   z-index: 1;
   max-width: 700px;
   margin: 0 auto;
-  padding: 80px 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 
